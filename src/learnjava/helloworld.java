@@ -1,5 +1,6 @@
 package learnjava;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class helloworld {
@@ -8,17 +9,16 @@ public class helloworld {
 		
 		Scanner scanner = new Scanner (System.in);
 		
-		int a = scanner.nextInt();
-		int b = scanner.nextInt();
+		int[] myArray = new int[5];
 		
-		if (a == 0 && b == 0) {
-			System.out.println("Phương trình có vô số nghiệm");
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Nhập phần tử thứ " + i + ": ");
+			myArray[i] = scanner.nextInt();
 		}
-		else if (a == 0 && b != 0) {
-			System.out.println("Phương trình vô nghiệm");
-		}
-		else {
-			System.out.printf("Nghiệm của phương trình là : %.3f\n", (float)b/a * -1);
+		
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Phần tử thứ " + i + ": ");
+			System.out.println(myArray[i]);
 		}
 		
 		scanner.close();
