@@ -5,27 +5,27 @@ import java.util.ArrayList;
 
 public class Test {
 	
-	static Scanner scanner = new Scanner(System.in);
+	static class Product {
+		
+		String name;
+		double price;
+		
+		public Product(String name, double price) {
+			this.name = name;
+			this.price = price;
+		}
+		
+		public void printProduct() {
+			System.out.println(this.name + " " + this.price);
+		}
+		
+	}
 	
 	public static void main(String[] args) {
 		
-		int n = scanner.nextInt();
+		Product pd = new Product("iphone", 14.5);
+		pd.printProduct();
 		
-		ArrayList<Integer> myArray = new ArrayList<>();
-		
-		for (int i = 0; i < n; i++) {
-			int x = scanner.nextInt();
-			myArray.add(x);
-		}
-		
-		myArray.remove(2);
-		
-		for (int x : myArray) {
-			System.out.printf("%d ", x);
-		}
-		
-		
-		scanner.close();
 	}
 	
 }
